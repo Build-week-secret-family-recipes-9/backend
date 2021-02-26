@@ -3,6 +3,8 @@
 ## Introduction
 
 POST  | /api/auth/login    | Logs in the user
+
+
 POST  | /api/auth/register | Registers the user to the database
 
 
