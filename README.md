@@ -3,22 +3,36 @@
 ## Introduction
 
 POST | /api/auth/login | Logs in the user and returns the session token
+
 POST | /api/auth/register | Registers the user to the database & encrypts the password
+
 POST | /api/recipes | Add another recipe
+
 GET | /api/auth/users | Get User settings 
+
 GET | /api/recipes | Get recipes by user or role
+
 PUT | /api/auth/users | Edit User settings (change password)
+
 DELETE | /api/recipes/:id | Delete recipe based by id
 
 # Recipe Schema object
 {
+
     "id": 1,
+
     "title": "Eggwhites with ham",
+
     "source": "food.com",
+
     "ingredients": "fried shrimp with chocolate chips",
+
     "instructions": "Step 1 fry the shrimp step 2 batter the chocolate 3 other stuff as well here",
+
     "category": "c food",
+
     "img": "../../assets/img/shrimps.jpg"
+    
 }
 
 
