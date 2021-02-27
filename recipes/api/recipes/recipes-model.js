@@ -1,6 +1,8 @@
 const db = require('../../database/connection');
 
 
+
+
 function find() {
     return db("recipes")
     .select("id", "title", "source", "ingredients", "category", "img");

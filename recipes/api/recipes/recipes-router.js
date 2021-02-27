@@ -1,10 +1,11 @@
 const express = require("express");
 const db = require("./recipes-model");
 
+
 const router = express.Router();
 
 
-//get requests
+//get recipes requests
 
 router.get("/", async (req, res) => {
   try {
@@ -17,7 +18,7 @@ router.get("/", async (req, res) => {
     });
   }
 });
-
+// Get recipe by id
 router.get("/:id", async (req, res) => {
     const { id } = req.params
     try {
@@ -32,7 +33,23 @@ router.get("/:id", async (req, res) => {
   });
 
 
-// post request 
+/*post request with
+  // TODO for future verisions see if 
+  // front-end wants to map an array with instructions
+  // so each step is on a new line for each individual instruction 
+  // we can  make instructions here into 
+  // an object or array so each direction is on a new 
+  // element or has a new key value pair 
+{
+    "id": 1,
+    "title": "Eggwhites with ham",
+    "source": "your mom",
+    "ingredients": "fried shrimp with chocolate chips",
+    "instructions": "Step 1 fry the shrimp step 2 batter the chocolate 3 other stuff as well here",
+    "category": "c food",
+    "img": "../../assets/img/shrimps.jpg"
+}
+*/
 
 router.post("/", async (req, res) => {
     const addRecipe = req.body;
@@ -46,7 +63,7 @@ router.post("/", async (req, res) => {
   });
 
 
-  // put request 
+  // put request edit by /api/recipes/id & its previous shape
   router.put("/:id", async (req, res) => {
     const { id } = req.params;
     const changes = req.body;
@@ -64,7 +81,7 @@ router.post("/", async (req, res) => {
     }
   });
 
-  // delete request 
+  // delete request by id 
 
   router.delete("/:id", async (req, res) => {
     const { id } = req.params;
