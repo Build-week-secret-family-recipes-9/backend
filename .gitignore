@@ -124,16 +124,6 @@ auth.db3
 
 # VSCode
 .vscode
-<<<<<<< HEAD
- 
-=======
-userapp
 userapp/
-
-
+/userapp
  
-recipes/node_modules
-recipes/database/auth.db3
-recipes/database/*.db3
-recipes/package-lock.json 
->>>>>>> 23f1e2647dd116dc5528cbc6ab70ac06a33c02ac
