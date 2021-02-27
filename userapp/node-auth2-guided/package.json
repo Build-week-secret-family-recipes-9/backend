@@ -1,9 +1,9 @@
 {
-  "name": "node-2-guided",
+  "name": "recipes9backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "reset": "rm -r node_modules/ ; rm package-lock.json ;",
+    "reset": "rm -r node_modules/ ; rm package-lock.json ; rm -r database/auth.db3 ; ",
     "server": "nodemon",
     "start": "node index.js",
     "migrate": "knex migrate:latest",
