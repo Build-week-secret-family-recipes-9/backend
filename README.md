@@ -10,27 +10,27 @@ Will get/put/post/delete recipes, log the user in/out, register the user, view o
 
 # End Points
 
-POST | /api/auth/logout | Log the user out by destroying the session
+| POST | /api/auth/logout | Log the user out by destroying the session | 
 
-POST | /api/auth/login | Logs in the user and returns the session token
+| POST | /api/auth/login | Logs in the user and returns the session token |
 
-POST  | /api/auth/login    | Logs in the user
+| POST | /api/auth/login | Logs in the user |
 
-POST  | /api/auth/register | Registers the user to the database
+| POST | /api/auth/register | Registers the user to the  database |
 
-POST | /api/auth/register | Registers the user to the database & encrypts the password
+| POST | /api/auth/register | Registers the user to the database & encrypts the password |
 
-POST | /api/recipes | Add another recipe
+| POST | /api/recipes | Add another recipe |
 
-GET | /api/auth/users | Get User settings 
+| GET | /api/auth/users | Get User settings | 
 
-GET | /api/auth/users/:id | Get User settings based on user id 
+| GET | /api/auth/users/:id | Get User settings based on user id | 
 
-GET | /api/recipes | Get recipes by user or role
+| GET | /api/recipes | Get recipes by user or role |
 
-PUT | /api/auth/users | Edit User settings (change password)
+| PUT | /api/auth/users | Edit User settings (change password) |
 
-DELETE | /api/recipes/:id | Delete recipe based by id
+| DELETE | /api/recipes/:id | Delete recipe based by id |
 
 # Recipe Schema object
 
