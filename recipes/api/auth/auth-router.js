@@ -56,6 +56,33 @@ router.post("/login", (req, res) => {
   }
 });
 
+
+router.get('/logout', (req, res) => {
+  if(req.session && req.session.user) {
+    req.session.destroy(err => {
+      if (err) {
+        res.json('Error On /logout wont leave',err);
+      } else {
+        res.json({msg: 'Logged Out'});
+      }
+    })
+  } else {
+    res.end();
+  }
+});
+
+// router.post("/logout", (req, res) => {
+//   const { userToken } = req.body;
+//   if (t === token) {
+//     //remove token from db
+//   }
+  
+//   res.status(200).json({
+//     payload: token
+//   });
+// });
+
+
 function generateToken(user) {
   const payload = {
     subject: user.id,
