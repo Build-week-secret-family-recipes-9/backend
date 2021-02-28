@@ -10,9 +10,13 @@ Will get/put/post/delete recipes, log the user in/out, register the user, view o
 
 # End Points
 
-| POST | /api/auth/logout | Log the user out by destroying the session | 
+| End Point | Description |
+| --- | --- |
+| `POST /api/auth/logout` | Log the user out by destroying the session |
+| `POST /api/auth/login` | Logs in the user and returns the session token |
 
-| POST | /api/auth/login | Logs in the user and returns the session token |
+
+
 
 | POST | /api/auth/login | Logs in the user |
 
