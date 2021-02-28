@@ -1,6 +1,6 @@
 # Authentication using JSON Web Tokens (JWTs) Build Week Project Family Recipes
-
-## Introduction
+# Version 1
+## End Points
 
 POST | /api/auth/login | Logs in the user and returns the session token
 
@@ -9,6 +9,8 @@ POST | /api/auth/register | Registers the user to the database & encrypts the pa
 POST | /api/recipes | Add another recipe
 
 GET | /api/auth/users | Get User settings 
+
+GET | /api/auth/users/:id | Get User settings based on user id 
 
 GET | /api/recipes | Get recipes by user or role
 
@@ -36,10 +38,14 @@ DELETE | /api/recipes/:id | Delete recipe based by id
 }
 
 
-# Dev
-Do we need departments and or roles? To create admins and moderators or should every one be the same type of users? 
+# Advanced Dev Topics
+Do we need posts to be public or do we need role restricted private posts?
+
+For the recipes post at instructions value- Does front end need new lines for each direction? Do we need a way to map threw each step of the recipe? If so should this get changed to an array or a name value pair? Like an auto incrementing field within a record. Something where each step is a new element and is easily mapped threw to give you a new line on every step of that direction?
 
 
 ## Future
-Work on validating and making middleware so each recipe post or get is done by the user session's validity 
+Work on validating and making middleware so each recipe post or get is done by the user session's validity.
+Work on Testing. 
+Lets all make different styling skins once its done. 
 
