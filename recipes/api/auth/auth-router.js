@@ -57,16 +57,24 @@ router.post("/login", (req, res) => {
 });
 
 
-router.get('/logout', (req, res) => {
-  if(req.session && req.session.user) {
+
+// Logout is NOT working though it says it loggedout
+/// The session ID is still current How do we destroy this?
+
+router.post('/logout', (req, res) => {
+  if(req.session && req.session.cookie) {
     req.session.destroy(err => {
       if (err) {
         res.json('Error On /logout wont leave',err);
       } else {
-        res.json({msg: 'Logged Out'});
+        req.sessionID = 'noGoawayand Stop not working'
+        res.status(200).json({msg: 'Logged Out', er: err});
+        res.destroy();
+        res.end();
       }
     })
   } else {
+    console.log('theelse of logout', req.session)
     res.end();
   }
 });
