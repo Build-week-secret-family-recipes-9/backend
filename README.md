@@ -1,6 +1,6 @@
 # Authentication using JSON Web Tokens (JWTs) 
 
-https://git.heroku.com/family-recipes-9.git
+<!-- https://git.heroku.com/family-recipes-9.git -->
 # Creates tempory user sessions with the Bearer Token
 
 # Build Week Project Family Recipes
