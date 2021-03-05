@@ -1,41 +1,49 @@
-require("dotenv").config();
-
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth";
-// if using a local postgres server, please create the database manually, Knex will not create it autmatically
+const pgConnection = process.env.DATABASE_URL;
 module.exports = {
   development: {
     client: "sqlite3",
-    useNullAsDefault: true,
     connection: {
-      filename: "./database/auth.db3",
-    },
-    pool: {
-      afterCreate: (conn, done) => {
-        conn.run("PRAGMA foreign_keys = ON", done);
-      },
+      filename: "/database/auth.db3",
     },
     migrations: {
-      directory: "./database/migrations",
+      directory: "./data/migrations",
     },
     seeds: {
-      directory: "./database/seeds",
+      directory: "./data/seeds",
     },
   },
+
+  staging: {
+    client: "postgresql",
+    connection: {
+      database: "my_db",
+      user: "username",
+      password: "password",
+    },
+    pool: {
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: "knex_migrations",
+    },
+  },
+
   production: {
     client: "pg",
     connection: {
       connectionString: pgConnection,
-      ssl: { rejectUnauthorized: false }
+      ssl: { rejectUnauthorized: false },
     },
     pool: {
       min: 2,
-      max: 10
+      max: 10,
     },
     migrations: {
-      directory: "./database/migrations"
+      directory: "./data/migrations",
     },
     seeds: {
-      directory: "./database/seeds"
-    }
+      directory: "./data/seeds",
+    },
   },
 };
