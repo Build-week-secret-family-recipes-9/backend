@@ -6,10 +6,10 @@ module.exports = {
       filename: "/database/auth.db3",
     },
     migrations: {
-      directory: "./data/migrations",
+      directory: "./database/migrations",
     },
     seeds: {
-      directory: "./data/seeds",
+      directory: "./database/seeds",
     },
   },
 
@@ -40,7 +40,7 @@ module.exports = {
       max: 10,
     },
     migrations: {
-      directory: "./data/migrations",
+      directory: "./database/migrations",
     },
     seeds: {
       directory: "./data/seeds",
