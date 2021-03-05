@@ -2,7 +2,7 @@
 
 <b>REGISTER A NEW USER</b>
 <br/>
-POST: https://secret-family-recipes-157.herokuapp.com/auth/api/register
+POST: https://secret-family-recipes-157.herokuapp.com/api/auth/register
 
 <b>LOGIN A USER</b>
 <br/>
