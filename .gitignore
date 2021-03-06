@@ -102,7 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
-<<<<<<< HEAD
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
@@ -125,5 +124,3 @@ auth.db3
 .vscode
 userapp
 userapp/
-=======
->>>>>>> b3b5bb1994dcd29b99d216d2cb77fdbd9a31968b
