@@ -61,6 +61,9 @@ router.post("/", restricted , (req, res) => {
         .then(a =>{
           res.status(201).json(a)
         })
+        .catch( e => {
+          res.status(500).json({message: e.message})
+        })
 
     } catch (err) {
       console.log(err);
