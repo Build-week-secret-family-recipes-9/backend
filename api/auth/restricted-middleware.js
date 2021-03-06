@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
   if (tkn) {
     jwt.verify(tkn, jwtSecret, (err, decoded) => {
       if (err) {
-        res.status(401).json('we wantz VALID token')
+        res.status(401).json('we want the token')
       } else {
         console.log(req);
         req.decodedJwt = decoded;
