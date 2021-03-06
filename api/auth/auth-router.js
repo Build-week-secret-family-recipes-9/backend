@@ -19,20 +19,15 @@ router.post("/register", (req, res) => {
     // save the user to the database
     Users.add(credentials)
       .then(user => {
-        // res.status(201).json({ data: user });
-        next({data: user});
+        res.status(201).json({ data: user });
       })
       .catch(error => {
-        // res.status(500).json({ message: error.message });
-        next({ message: error.message })
+        res.status(500).json({ message: error.message });
       });
   } else {
-    // res.status(400).json({
-    //   message: "please provide username and password and the password shoud be alphanumeric",
-    // });
-    next({
+    res.status(400).json({
       message: "please provide username and password and the password shoud be alphanumeric",
-    })
+    });
   }
 });
 
