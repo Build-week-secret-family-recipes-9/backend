@@ -33,7 +33,7 @@ server.use(cors());
 // };
 // server.use(session(sessionConfig)); 
 
-server.use("/auth", authRouter);
+server.use("/api/auth", authRouter);
 server.use("/api/users", usersRouter);
 server.use("/api/recipes", recipesRouter);
 
