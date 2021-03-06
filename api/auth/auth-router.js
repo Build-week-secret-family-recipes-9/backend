@@ -56,6 +56,8 @@ router.post("/login", (req, res) => {
   }
 });
 
+
+
 function generateToken(user) {
   const payload = {
     subject: user.id,
@@ -68,5 +70,22 @@ function generateToken(user) {
   console.log(payload,jwtSecret);
   return jwt.sign(payload, jwtSecret, options)
 }
+
+
+
+router.delete('/logout', (req, res) => {
+  if (req.session) {
+      req.session.destroy((err) => {
+          if (err) {
+              res.status(400).json({ message: 'error logging out' });
+          } else {
+              res.json({ message: 'logged out' });
+          }
+      });
+  } else {
+      res.end();
+  }
+});
+
 
 module.exports = router;
