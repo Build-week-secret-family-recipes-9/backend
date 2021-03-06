@@ -62,7 +62,7 @@ router.post("/", restricted , (req, res) => {
           res.status(201).json(a)
         })
         .catch( e => {
-          res.status(500).json({message: e.message})
+          res.status(400).json({message: e.message})
         })
 
     } catch (err) {
