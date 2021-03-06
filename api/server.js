@@ -8,7 +8,7 @@ const authRouter = require("./auth/auth-router.js");
 const usersRouter = require("./users/users-router.js");
 
 const server = express();
-// const recipesRouter = require("./recipes/recipes-router");
+const recipesRouter = require("./recipes/recipes-router");
 
 
 
