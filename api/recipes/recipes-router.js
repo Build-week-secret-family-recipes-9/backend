@@ -52,11 +52,16 @@ router.get("/:id", restricted ,async (req, res) => {
 }
 */
 
-router.post("/", restricted ,async (req, res) => {
+router.post("/", restricted , (req, res) => {
     const addRecipe = req.body;
     try {
-      const newRecipe = await db.add(addRecipe);
-      res.json(newRecipe);
+      // const newRecipe = await db.add(addRecipe);
+      // res.json(newRecipe);
+      db.add(addRecipe)
+        .then(a =>{
+          res.status(201).json(a)
+        })
+
     } catch (err) {
       console.log(err);
       res.status(500).json({ message: "could not add the recipe" });
