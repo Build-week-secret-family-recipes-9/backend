@@ -89,7 +89,7 @@ router.post("/", async (req, res) => {
     try {
       const count = await db.remove(id);
       if (db) {
-        res.json({ message: `deleted ${count} records` });
+        res.json({ message: "Deleted!"});
       } else {
         res.status(404).json({ message: 'invalid recipe id' });
       }
