@@ -112,7 +112,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
+recipes/node_modules
 # Mac Files
 .DS_Store
 
