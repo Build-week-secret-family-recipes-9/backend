@@ -58,42 +58,6 @@ router.post("/login", (req, res) => {
 
 
 
-<<<<<<< HEAD:recipes/api/auth/auth-router.js
-// Logout is NOT working though it says it loggedout
-/// The session ID is still current How do we destroy this?
-
-router.post('/logout', (req, res) => {
-  if(req.session && req.session.cookie) {
-    req.session.destroy(err => {
-      if (err) {
-        res.json('Error On /logout wont leave',err);
-      } else {
-        req.sessionID = 'noGoawayand Stop not working'
-        res.status(200).json({msg: 'Logged Out', er: err});
-        res.destroy();
-        res.end();
-      }
-    })
-  } else {
-    console.log('theelse of logout', req.session)
-    res.end();
-  }
-});
-
-// router.post("/logout", (req, res) => {
-//   const { userToken } = req.body;
-//   if (t === token) {
-//     //remove token from db
-//   }
-  
-//   res.status(200).json({
-//     payload: token
-//   });
-// });
-
-
-=======
->>>>>>> TestingSunMar07-2021:api/auth/auth-router.js
 function generateToken(user) {
   const payload = {
     subject: user.id,
