@@ -1,15 +1,30 @@
-# Authentication using JSON Web Tokens (JWTs) 
+<h2>ENDPOINTS</h2>
 
-# Creates tempory user sessions with the Bearer Token
+<b>REGISTER A NEW USER</b>
+<br/>
+POST: https://secret-family-recipes-157.herokuapp.com/api/auth/register
 
-# Build Week Project Family Recipes
+<b>LOGIN A USER</b>
+<br/>
+POST: https://secret-family-recipes-157.herokuapp.com/api/auth/login
 
-# Version 1
+<b>LOGOUT A USER</b>
+<br/>
+DELETE: https://secret-family-recipes-157.herokuapp.com/api/auth/logout
 
+<<<<<<< HEAD
 Will get/put/post/delete **recipes**, log the user in/out, register the user, view other users as a user, view other users as admin, or view the currently logged in user only.  
+=======
+<b>GET RECIPES</b>
+<br/>
+GET: https://secret-family-recipes-157.herokuapp.com/api/recipes
+>>>>>>> TestingSunMar07-2021
 
-# End Points
+<b>GET RECIPES BY ID</b>
+<br/>
+GET: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
 
+<<<<<<< HEAD
 | End Point | Description |
 | --- | --- |
 | `POST /api/auth/logout` | Log the user out by destroying the session |
@@ -59,4 +74,16 @@ Will get/put/post/delete **recipes**, log the user in/out, register the user, vi
 2] Work on Testing. 
 
 3] Lets all make different styling skins once its done. 
+=======
+<b>ADD A NEW RECIPE</b>
+<br/>
+POST: https://secret-family-recipes-157.herokuapp.com/api/recipes
 
+<b>UPDATE A RECIPE</b>
+<br/>
+PUT: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
+>>>>>>> TestingSunMar07-2021
+
+<b>DELETE A RECIPE</b>
+<br/>
+DELETE: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id

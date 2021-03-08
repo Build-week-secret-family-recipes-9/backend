@@ -58,6 +58,7 @@ router.post("/login", (req, res) => {
 
 
 
+<<<<<<< HEAD:recipes/api/auth/auth-router.js
 // Logout is NOT working though it says it loggedout
 /// The session ID is still current How do we destroy this?
 
@@ -91,6 +92,8 @@ router.post('/logout', (req, res) => {
 // });
 
 
+=======
+>>>>>>> TestingSunMar07-2021:api/auth/auth-router.js
 function generateToken(user) {
   const payload = {
     subject: user.id,
@@ -103,5 +106,22 @@ function generateToken(user) {
   console.log(payload,jwtSecret);
   return jwt.sign(payload, jwtSecret, options)
 }
+
+
+
+router.delete('/logout', (req, res) => {
+  if (req.session) {
+      req.session.destroy((err) => {
+          if (err) {
+              res.status(400).json({ message: 'error logging out' });
+          } else {
+              res.json({ message: 'logged out' });
+          }
+      });
+  } else {
+      res.end();
+  }
+});
+
 
 module.exports = router;
