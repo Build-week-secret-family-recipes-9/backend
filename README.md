@@ -1,25 +1,10 @@
+# The family Recipes Site
+
+Log the user in with a JWT token session which restricts their access based on if they are logged in and their role as admin or user. Once logged in posting recipes to the recipes list is done
+
+
 <h2>ENDPOINTS</h2>
 
-<b></b>
-<br/>
-POST:
-
-<b>/b>
-<br/>
-POST: 
-
-<b>LOGOUT A USER</b>
-<br/>
-DELETE: 
-
-  
-<b>GET RECIPES</b>
-<br/>
-GET: 
-
-<b>GET RECIPES BY ID</b>
-<br/>
-GET: 
 
 | End Point | Description |
 | --- | --- |
@@ -36,23 +21,23 @@ GET:
 
 # Recipe Schema object
 
-{
+    {
 
-    "id": 1,
+        "id": 1,
 
-    "title": "Eggwhites with ham",
+        "title": "Eggwhites with ham",
 
-    "source": "food.com",
+        "source": "food.com",
 
-    "ingredients": "fried shrimp with chocolate chips",
+        "ingredients": "fried shrimp with chocolate chips",
 
-    "instructions": "Step 1 fry the shrimp step 2 batter the chocolate 3 other stuff as well here",
+        "instructions": "Step 1 fry the shrimp step 2 batter the chocolate 3 other stuff as well here",
 
-    "category": "c food",
+        "category": "c food",
 
-    "img": "../../assets/img/shrimps.jpg"
+        "img": "../../assets/img/shrimps.jpg"
     
-}
+    }
 
 # User Schema
     {
