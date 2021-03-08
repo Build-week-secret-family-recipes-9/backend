@@ -54,29 +54,29 @@ GET:
     
 }
 
+# User Schema
+    {
+        "id" : 32,
+        
+        "username" : "name",
 
-# Advanced Dev Topics
+        "password" : "thepassword3",
 
-1] Do we need posts to be public or do we need role restricted private posts?
+        "roles" : "1 admin or 2 user"
+    }
 
-2] For the recipes post at instructions value- Does front end need new lines for each direction? Do we need a way to map threw each step of the recipe? If so should this get changed to an array or a name value pair? Like an auto incrementing field within a record. Something where each step is a new element and is easily mapped threw to give you a new line on every step of that direction?
+
+# Roles Schema
 
 
-## Future
+    {
+        "id" : 1,
 
-1] Work on validating and making middleware so each request or response based off the users session validity.
+        "name" "admin"
+    }
 
-2] Work on Testing. 
+     {
+        "id" : 2,
 
-3] Lets all make different styling skins once its done. 
-<b>ADD A NEW RECIPE</b>
-<br/>
-POST: https://secret-family-recipes-157.herokuapp.com/api/recipes
-
-<b>UPDATE A RECIPE</b>
-<br/>
-PUT: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
-
-<b>DELETE A RECIPE</b>
-<br/>
-DELETE: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
+        "name" "user"
+    }
