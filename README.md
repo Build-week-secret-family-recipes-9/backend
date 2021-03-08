@@ -1,43 +1,38 @@
 <h2>ENDPOINTS</h2>
 
-<b>REGISTER A NEW USER</b>
+<b></b>
 <br/>
-POST: https://secret-family-recipes-157.herokuapp.com/api/auth/register
+POST:
 
-<b>LOGIN A USER</b>
+<b>/b>
 <br/>
-POST: https://secret-family-recipes-157.herokuapp.com/api/auth/login
+POST: 
 
 <b>LOGOUT A USER</b>
 <br/>
-DELETE: https://secret-family-recipes-157.herokuapp.com/api/auth/logout
+DELETE: 
 
-<<<<<<< HEAD
-Will get/put/post/delete **recipes**, log the user in/out, register the user, view other users as a user, view other users as admin, or view the currently logged in user only.  
-=======
+  
 <b>GET RECIPES</b>
 <br/>
-GET: https://secret-family-recipes-157.herokuapp.com/api/recipes
->>>>>>> TestingSunMar07-2021
+GET: 
 
 <b>GET RECIPES BY ID</b>
 <br/>
-GET: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
+GET: 
 
-<<<<<<< HEAD
 | End Point | Description |
 | --- | --- |
-| `POST /api/auth/logout` | Log the user out by destroying the session |
-| `POST /api/auth/login` | Logs in the user and returns the session token |
-| `POST /api/auth/login` | Logs in the user |
-| `POST /api/auth/register` | Registers the user to the  database |
-| `POST /api/auth/register` | Registers the user to the database & encrypts the password |
-| `POST /api/recipes` | Add another recipe |
-| `GET /api/auth/users` | Get User settings | 
+| `DELETE https://secret-family-recipes-157.herokuapp.com/api/auth/logout` | Log the user out by destroying the session | 
+| `POST https://secret-family-recipes-157.herokuapp.com/api/auth/login` | Logs in the user |
+| `POST https://secret-family-recipes-157.herokuapp.com/api/auth/register ` | REGISTER A NEW USER |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/recipes/:id` | GET Recipe By ID |
 | `GET /api/auth/users/:id` | Get User settings based on user id | 
-| `GET /api/recipes` | Get recipes by user or role |
-| `PUT /api/auth/users` | Edit User settings (change password) |
-| `DELETE /api/recipes/:id` | Delete recipe based by id |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/recipes` | Will get/put/post/delete **recipes**, log the user in/out, register the user, view other users as a user, view other users as admin, or view the currently logged in user only. |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/users/limited` | Get The Currently Logged in User who has the active Session |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/users/userlimited` | Only Show other Users when You are a user (not for admins) |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/users/adminlimited` | Only Show other admins when You are an admin (only for admins) |
+| `GET https://secret-family-recipes-157.herokuapp.com/api/auth/users` | Get All Users (only for admins) | 
 
 # Recipe Schema object
 
@@ -74,7 +69,6 @@ GET: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
 2] Work on Testing. 
 
 3] Lets all make different styling skins once its done. 
-=======
 <b>ADD A NEW RECIPE</b>
 <br/>
 POST: https://secret-family-recipes-157.herokuapp.com/api/recipes
@@ -82,7 +76,6 @@ POST: https://secret-family-recipes-157.herokuapp.com/api/recipes
 <b>UPDATE A RECIPE</b>
 <br/>
 PUT: https://secret-family-recipes-157.herokuapp.com/api/recipes/:id
->>>>>>> TestingSunMar07-2021
 
 <b>DELETE A RECIPE</b>
 <br/>
