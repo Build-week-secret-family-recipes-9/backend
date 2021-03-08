@@ -1,14 +1,14 @@
 const express = require("express");
 const db = require("./recipes-model");
 
-const restricted = require("../auth/restricted-middleware.js");
+// const restricted = require("../auth/restricted-middleware.js");
 
 const router = express.Router();
 
 
 //get recipes requests
 
-router.get("/", restricted, async (req, res) => {
+router.get("/",  async (req, res) => {
   try {
     const recipes = await db.find();
     res.json(recipes);
@@ -20,7 +20,7 @@ router.get("/", restricted, async (req, res) => {
   }
 });
 // Get recipe by id
-router.get("/:id", restricted ,async (req, res) => {
+router.get("/:id", async (req, res) => {
     const { id } = req.params
     try {
       const recipes = await db.findById(id);
@@ -52,7 +52,7 @@ router.get("/:id", restricted ,async (req, res) => {
 }
 */
 
-router.post("/", restricted , (req, res) => {
+router.post("/", async (req, res) => {
     const addRecipe = req.body;
     try {
       // const newRecipe = await db.add(addRecipe);
