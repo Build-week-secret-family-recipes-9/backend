@@ -121,7 +121,7 @@ dist
 # Removes database
 database/auth.db3
 auth.db3
-
+node_modules/
 # VSCode
 .vscode
 userapp/
